@@ -16,6 +16,12 @@ tmp_chroma_*/
 cache/docs/*.pkl
 cache/vlm/*.pkl
 cache/embeddings/*.pkl
+**/cache/docs/*.pkl
+**/cache/vlm/*.pkl
+**/cache/embeddings/*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
 
 # OS
 .DS_Store
@@ -24,3 +30,4 @@ Thumbs.db
 # IDE
 .idea/
 .vscode/
+.claude/
