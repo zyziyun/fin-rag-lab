@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local artifacts
+chroma_db*/
+tmp_chroma_*/
+*.egg-info/
+
+# Env / secrets
+.env
+.venv/
+
+# Cache (regeneratable; we ship cache_bundle.zip separately)
+cache/docs/*.pkl
+cache/vlm/*.pkl
+cache/embeddings/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
