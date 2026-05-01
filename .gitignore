@@ -6,6 +6,7 @@ __pycache__/
 # Local artifacts
 chroma_db*/
 tmp_chroma_*/
+tmp_*.csv
 *.egg-info/
 
 # Env / secrets
