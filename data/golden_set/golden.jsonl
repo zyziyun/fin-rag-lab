@@ -1,0 +1,34 @@
+{"question": "What was Wells Fargo's Q4 2025 net income?", "ground_truth": "Wells Fargo reported Q4 2025 net income of $5.4 billion.", "category": "fact_finding", "expected_doc": "wells_fargo"}
+{"question": "What was Wells Fargo's diluted EPS in Q4 2025?", "ground_truth": "Diluted EPS of $1.62 per share in Q4 2025.", "category": "fact_finding", "expected_doc": "wells_fargo"}
+{"question": "What was Wells Fargo's CET1 ratio at the end of Q4 2025?", "ground_truth": "Wells Fargo reported its Common Equity Tier 1 (CET1) capital ratio in the Q4 2025 release.", "category": "fact_finding", "expected_doc": "wells_fargo"}
+{"question": "What was Tesla's vehicle production in Q1 2026?", "ground_truth": "Tesla's Q1 2026 update reports the quarter's production volumes.", "category": "fact_finding", "expected_doc": "tesla"}
+{"question": "What was Tesla's energy storage deployment in Q1 2026?", "ground_truth": "Tesla's energy storage deployments are reported in the Q1 2026 update.", "category": "fact_finding", "expected_doc": "tesla"}
+{"question": "What was AMD's data center segment revenue in Q4 2025?", "ground_truth": "AMD's Q4 2025 earnings reports data center segment revenue.", "category": "fact_finding", "expected_doc": "amd"}
+{"question": "What was AMD's gaming segment revenue in Q4 2025?", "ground_truth": "AMD's Q4 2025 release reports gaming segment revenue.", "category": "fact_finding", "expected_doc": "amd"}
+{"question": "What was AMD's full-year 2025 revenue?", "ground_truth": "AMD's Q4 2025 release includes full-year 2025 financial results.", "category": "fact_finding", "expected_doc": "amd"}
+{"question": "What was AMD's gross margin in Q4 2025?", "ground_truth": "AMD's Q4 2025 release reports the quarterly gross margin.", "category": "fact_finding", "expected_doc": "amd"}
+{"question": "What was Wells Fargo's average loan balance in Q4 2025?", "ground_truth": "Wells Fargo's release reports average loan balances for Q4 2025.", "category": "fact_finding", "expected_doc": "wells_fargo"}
+
+{"question": "How did Wells Fargo's Consumer Banking and Lending segment perform in Q4 2025?", "ground_truth": "The release describes the segment's revenue trends and key drivers.", "category": "semantic", "expected_doc": "wells_fargo"}
+{"question": "What were the main drivers of Wells Fargo's net interest income changes?", "ground_truth": "Wells Fargo discusses NII drivers in its Q4 2025 release.", "category": "semantic", "expected_doc": "wells_fargo"}
+{"question": "How does Tesla describe progress on its AI and robotics initiatives?", "ground_truth": "Tesla's Q1 2026 update covers AI and robotics progress including Cortex, Optimus, and FSD.", "category": "semantic", "expected_doc": "tesla"}
+{"question": "What were Tesla's key operational highlights for Q1 2026?", "ground_truth": "Tesla's Q1 2026 update lists operational highlights including production, deliveries, and energy.", "category": "semantic", "expected_doc": "tesla"}
+{"question": "How did AMD's Instinct GPU products perform in 2025?", "ground_truth": "AMD discusses Instinct/MI300 series GPU performance and adoption.", "category": "semantic", "expected_doc": "amd"}
+{"question": "What is AMD's outlook for the data center AI market?", "ground_truth": "AMD's Q4 2025 earnings discusses the data center AI market opportunity.", "category": "semantic", "expected_doc": "amd"}
+{"question": "What capital return actions did Wells Fargo take in Q4 2025?", "ground_truth": "Wells Fargo describes share repurchases and/or dividend actions in Q4 2025.", "category": "semantic", "expected_doc": "wells_fargo"}
+{"question": "How did Tesla's automotive margins evolve in Q1 2026?", "ground_truth": "Tesla discusses automotive gross margin in Q1 2026.", "category": "semantic", "expected_doc": "tesla"}
+
+{"question": "Compare Wells Fargo's Q4 2025 net interest income to its Q4 2024 figure", "ground_truth": "The release contains Q4 2025 and prior-year-quarter NII figures for comparison.", "category": "single_doc_multihop", "expected_doc": "wells_fargo"}
+{"question": "How did Tesla's Q1 2026 production compare to deliveries, and what does the gap suggest?", "ground_truth": "Tesla's update reports both production and deliveries; the relationship between them indicates inventory direction.", "category": "single_doc_multihop", "expected_doc": "tesla"}
+{"question": "Across AMD's segments, which grew fastest year-over-year in Q4 2025?", "ground_truth": "AMD's segment-level YoY data allows ranking segment growth.", "category": "single_doc_multihop", "expected_doc": "amd"}
+{"question": "What was the trend in AMD's gross margin from Q4 2024 to Q4 2025?", "ground_truth": "AMD reports Q4 2024 and Q4 2025 gross margin allowing trend comparison.", "category": "single_doc_multihop", "expected_doc": "amd"}
+
+{"question": "Which company has the largest absolute revenue: Wells Fargo, Tesla, or AMD?", "ground_truth": "By comparing Q4/Q1 2025 revenue across the three filings, Wells Fargo has the largest revenue base, followed by Tesla, with AMD smallest.", "category": "cross_doc", "expected_doc": "any"}
+{"question": "Which of Tesla and AMD has higher gross margin in their most recent quarter?", "ground_truth": "Comparing automotive gross margin (Tesla) vs overall gross margin (AMD) in their respective filings.", "category": "cross_doc", "expected_doc": "any"}
+{"question": "Are Tesla and AMD both reporting growth in their AI-related businesses?", "ground_truth": "Both filings discuss AI investments and growth — Tesla via FSD/AI infrastructure, AMD via data center AI.", "category": "cross_doc", "expected_doc": "any"}
+{"question": "How do Wells Fargo's risk discussions differ from Tesla's forward-looking statements?", "ground_truth": "Each filing has different focal risks — banking/credit for WF vs production/regulatory for Tesla.", "category": "cross_doc", "expected_doc": "any"}
+
+{"question": "What was Apple's Q4 2025 revenue?", "ground_truth": "REFUSE: Apple is not in the corpus.", "category": "out_of_corpus", "expected_doc": "none"}
+{"question": "What is the current US federal funds rate?", "ground_truth": "REFUSE: not in corpus, requires external real-time data.", "category": "out_of_corpus", "expected_doc": "none"}
+{"question": "When will Tesla release its Q2 2026 earnings?", "ground_truth": "REFUSE: future event not in the Q1 2026 update document.", "category": "out_of_corpus", "expected_doc": "none"}
+{"question": "What did Microsoft's CEO say about AI during the earnings call?", "ground_truth": "REFUSE: Microsoft not in corpus.", "category": "out_of_corpus", "expected_doc": "none"}
