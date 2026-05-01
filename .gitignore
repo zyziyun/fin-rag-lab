@@ -13,12 +13,12 @@ tmp_chroma_*/
 .venv/
 
 # Cache (regeneratable; we ship cache_bundle.zip separately)
-cache/docs/*.pkl
-cache/vlm/*.pkl
-cache/embeddings/*.pkl
-**/cache/docs/*.pkl
-**/cache/vlm/*.pkl
-**/cache/embeddings/*.pkl
+cache/docs/
+cache/vlm/
+cache/embeddings/
+**/cache/docs/
+**/cache/vlm/
+**/cache/embeddings/
 
 # Jupyter
 .ipynb_checkpoints/

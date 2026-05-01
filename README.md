@@ -1,4 +1,4 @@
-# VoyageAI RAG Lab — Production-Grade RAG Pipeline
+# Fin-RAG-Lab — Production-Grade RAG Pipeline
 
 **Target audience**: AI/ML engineering candidates targeting senior IC roles at large US tech and traditional enterprises (e.g., Wells Fargo / Capco AI Engineer — GenAI / Agentic Systems)
 
