@@ -143,4 +143,4 @@ def configure_langsmith():
     """Idempotent LangSmith setup. Safe to call without an API key (it just no-ops)."""
     if settings.has_langsmith_key:
         os.environ.setdefault("LANGSMITH_TRACING", "true")
-        os.environ.setdefault("LANGSMITH_PROJECT", "voyageai-rag-lab")
+        os.environ.setdefault("LANGSMITH_PROJECT", "fin-rag-lab")
