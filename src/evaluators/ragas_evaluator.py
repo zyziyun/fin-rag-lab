@@ -126,6 +126,15 @@ class RagasEvaluator:
             embeddings=judge_emb,
         )
         df = result.to_pandas()
+
+        # Ragas's to_pandas() drops any non-standard columns (e.g. "category")
+        # that we passed in. Re-attach them positionally so downstream
+        # groupby("category") and other slicing keeps working. Order is
+        # preserved because Ragas iterates the Dataset row-by-row.
+        if len(df) == len(rows):
+            for extra_col in ("category",):
+                if extra_col not in df.columns:
+                    df[extra_col] = [r.get(extra_col, "") for r in rows]
         return df
 
     @staticmethod
@@ -135,26 +144,25 @@ class RagasEvaluator:
             return [json.loads(line) for line in f if line.strip()]
 
 
-class _RagasCostCallback:
+from langchain_core.callbacks import BaseCallbackHandler
+
+
+class _RagasCostCallback(BaseCallbackHandler):
     """LangChain callback handler that captures token usage from every chat
     call Ragas makes via its judge LLM, and routes it into our CostTracker.
 
-    Implemented as a duck-typed handler (not subclassing BaseCallbackHandler)
-    to keep this module import-light. LangChain accepts any object with the
-    right method names.
+    Inherits from BaseCallbackHandler because pydantic v2 validation on
+    ChatOpenAI's `callbacks` field rejects duck-typed objects.
     """
 
-    raise_error = False
-    run_inline = False
     ignore_chain = True
     ignore_agent = True
     ignore_retry = True
-    ignore_chat_model = False
-    ignore_llm = False
     ignore_retriever = True
     ignore_custom_event = True
 
     def __init__(self, cost_tracker, model: str):
+        super().__init__()
         self.cost_tracker = cost_tracker
         self.model = model
 
